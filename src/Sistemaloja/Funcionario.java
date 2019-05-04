@@ -74,13 +74,9 @@ public class Funcionario {//classe abstrata não pode ser instancianda
         return "Funcionario{" + "nome = " + nome + ", telefone = " + telefone + ", endereco = " 
                 + endereco + ", idade = " + idade + ", NumeroRg = " + NumeroRg + '}';
     }
-    /*public void ImprimirDados(){
-        System.out.println("Dados do Funcionarios");
-        System.out.println("Nome:" + this.getNome());
-        System.out.println("Teleone:" + this.getTelefone());
-        System.out.println("Endereço:" + this.getEndereco());
-        System.out.println("Idade:" + this.getIdade());
-        System.out.println("Registro geral: " + this.getRegistroGeral());*/
+
+        
+    }
         
     
-}
+
