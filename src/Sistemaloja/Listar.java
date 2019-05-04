@@ -25,7 +25,7 @@ public class Listar extends javax.swing.JFrame {
     private void preencherDadosListar(){
         ArrayList<Funcionario> funcionario = tela.getLista();
         for (int i=0; i<funcionario.size();i++){
-            jTextArea1.setText(jTextArea1.getText() + funcionario.get(i).getModelo()+ "\n");
+           // jTextArea1.setText(jTextArea1.getText() + funcionario.get(i).getModelo()+ "\n");
             
         }
         
