@@ -6,6 +6,7 @@
 package Sistemaloja;
 
 import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -14,21 +15,33 @@ import java.util.ArrayList;
 public class Listar extends javax.swing.JFrame {
 
     private TelaPrincipal tela;
-    
+    private ArrayList<Funcionario> funcionario = tela.getLista();
+     
     public Listar(TelaPrincipal tela) {
         initComponents();
         this.tela = tela;
         
-       preencherDadosListar();
+      // preencherDadosListar();
        
     }
     private void preencherDadosListar(){
-        ArrayList<Funcionario> funcionario = tela.getLista();
+       DefaultTableModel modelo = new DefaultTableModel ();
+       modelo.addColumn("nome");
+       modelo.addColumn("numeroRg");
+       modelo.addColumn("idade");
+       modelo.addColumn("telefone");
+       modelo.addColumn("endereco");
+       if (funcionario.isEmpty()){
+           //modelo.addRow(new Funcionario[]{"nome","numeroRg","idade","telefone","endereco"});
+           
+       }else{
         for (int i=0; i<funcionario.size();i++){
-           // jTextArea1.setText(jTextArea1.getText() + funcionario.get(i).getModelo()+ "\n");
+           // modelo.addRow(new Funcionario(nome.geText()));
+        }
+           //jTextArea1.setText(jTextArea1.getText() + funcionario.get(i).getModelo()+ "\n");
             
         }
-        
+        jTable1.setModel(modelo);
     }
     
     /**
@@ -107,11 +120,11 @@ public class Listar extends javax.swing.JFrame {
             .addGroup(jTextArea1Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -139,7 +152,7 @@ public class Listar extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextArea1AncestorAdded
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        preencherDadosListar();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
