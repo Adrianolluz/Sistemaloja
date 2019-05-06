@@ -15,13 +15,14 @@ import javax.swing.table.DefaultTableModel;
 public class Listar extends javax.swing.JFrame {
 
     private TelaPrincipal tela;
-    private ArrayList<Funcionario> funcionario = tela.getLista();
+    public ArrayList<Funcionario> funcionario = tela.getLista();
      
     public Listar(TelaPrincipal tela) {
         initComponents();
         this.tela = tela;
-        
-      // preencherDadosListar();
+    
+    
+        preencherDadosListar();
        
     }
     private void preencherDadosListar(){
