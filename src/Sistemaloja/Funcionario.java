@@ -2,7 +2,7 @@
 
 package Sistemaloja;
 
-public class Funcionario {//classe abstrata não pode ser instancianda
+public class Funcionario {
     
     private String nome;
     private String numeroRg ;
@@ -16,9 +16,7 @@ public class Funcionario {//classe abstrata não pode ser instancianda
     public Funcionario() {
     }
     
-    
-
-    public Funcionario(String nome, String numeroRg, String idade, String contato, String endereco,String profissao) {
+public Funcionario(String nome, String numeroRg, String idade, String contato, String endereco,String profissao) {
         this.nome = nome;
         this.numeroRg = numeroRg;
         this.idade = idade;
