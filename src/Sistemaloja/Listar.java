@@ -5,6 +5,7 @@
  */
 package Sistemaloja;
 
+import Visao.Tela;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
@@ -14,18 +15,18 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Listar extends javax.swing.JFrame {
 
-    private TelaPrincipal tela;
-    public ArrayList<Funcionario> funcionario = tela.getLista();
+    private Tela tela;
+   public ArrayList<Funcionario> funcionario = tela.getLista();
      
-    public Listar(TelaPrincipal tela) {
+    public Listar(Tela tela) {
         initComponents();
         this.tela = tela;
-    
-    
-        preencherDadosListar();
-       
+        
+       //Listar();  
     }
-    private void preencherDadosListar(){
+  
+  
+    private void Listar(){
        DefaultTableModel modelo = new DefaultTableModel ();
        modelo.addColumn("nome");
        modelo.addColumn("numeroRg");
@@ -42,9 +43,9 @@ public class Listar extends javax.swing.JFrame {
            //jTextArea1.setText(jTextArea1.getText() + funcionario.get(i).getModelo()+ "\n");
             
         }
-        jTable1.setModel(modelo);
-    }
+       // jTable1.setModel(modelo);
     
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -125,7 +126,7 @@ public class Listar extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -135,7 +136,7 @@ public class Listar extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,8 +154,9 @@ public class Listar extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextArea1AncestorAdded
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        preencherDadosListar();
+       Listar();
     }//GEN-LAST:event_jButton1ActionPerformed
+    
 
     /**
      * @param args the command line arguments
@@ -198,4 +200,5 @@ public class Listar extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JPanel jTextArea1;
     // End of variables declaration//GEN-END:variables
+
 }

@@ -5,10 +5,11 @@ package Sistemaloja;
 public class Funcionario {//classe abstrata não pode ser instancianda
     
     private String nome;
-    private String NumeroRg ;
-    private int idade;
-    private String telefone;
+    private String numeroRg ;
+    private String idade;
+    private String contato;
     private String endereco;
+    private String profissao;
    
    // public void AtendimentoCliente();
 
@@ -17,12 +18,13 @@ public class Funcionario {//classe abstrata não pode ser instancianda
     
     
 
-    public Funcionario(String nome, String NumeroRg, int idade, String telefone, String endereco) {
+    public Funcionario(String nome, String numeroRg, String idade, String contato, String endereco,String profissao) {
         this.nome = nome;
-        this.NumeroRg = NumeroRg;
+        this.numeroRg = numeroRg;
         this.idade = idade;
-        this.telefone = telefone;
+        this.contato = contato;
         this.endereco = endereco;
+        this.profissao = profissao;
     }
 
     public String getNome() {
@@ -34,27 +36,27 @@ public class Funcionario {//classe abstrata não pode ser instancianda
     }
 
     public String getNumeroRg() {
-        return NumeroRg;
+        return numeroRg;
     }
 
-    public void setNumeroRg(String NumeroRg) {
-        this.NumeroRg = NumeroRg;
+    public void setNumeroRg(String numeroRg) {
+        this.numeroRg = numeroRg;
     }
 
-    public int getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(int idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getContato() {
+        return contato;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setContato(String contato) {
+        this.contato = contato;
     }
 
     public String getEndereco() {
@@ -64,17 +66,22 @@ public class Funcionario {//classe abstrata não pode ser instancianda
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-     
-  
 
- 
+    public String getProfissao() {
+        return profissao;
+    }
+
+    public void setProfissao(String profissao) {
+        this.profissao = profissao;
+    }
 
     @Override
     public String toString() {
-        return "Funcionario{" + "nome = " + nome + ", telefone = " + telefone + ", endereco = " 
-                + endereco + ", idade = " + idade + ", NumeroRg = " + NumeroRg + '}';
+        return "Funcionario{" + "nome = " + nome + ", numeroRg = " + numeroRg + ", idade = " + idade + ", "
+                + "contato = " + contato + ", endereco = " + endereco + ", profissao = " + profissao + '}';
     }
-
+     
+   
         
     }
         

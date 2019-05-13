@@ -13,10 +13,11 @@ public class Gerente extends Funcionario{
         
     }
 
-    public Gerente(String nome, String NumeroRg, int idade, String telefone, String endereco) {
-        super(nome, NumeroRg, idade, telefone, endereco);
+    public Gerente(String nome, String numeroRg, String idade, String contato, String endereco, String profissao) {
+        super(nome, numeroRg, idade, contato, endereco, profissao);
     }
 
+    
     
     
 }
