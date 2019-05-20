@@ -45,7 +45,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/abstract-267054_960_720.png"))); // NOI18N
         getContentPane().add(ImagemFundo);
-        ImagemFundo.setBounds(0, 0, 600, 340);
+        ImagemFundo.setBounds(0, 0, 670, 450);
 
         MenuCadastro.setText("Cadastro");
         MenuCadastro.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -92,7 +92,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        setSize(new java.awt.Dimension(598, 384));
+        setSize(new java.awt.Dimension(696, 517));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
